@@ -1,0 +1,54 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+}
+h1{
+    font-size: 3rem;
+}
+.container{
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+    border: 2px solid red;
+}
+.hero{
+    color: white;
+    background-color: #23424A;
+    padding: 100px 0;
+    
+}
+
+.hero__text{
+    width: 60%;
+    border: 2px solid yellow;
+}
+
+.hero p{
+    margin-bottom: 3rem;
+    /* here font size of body is 21 px.. so in rem (1 rem = 16 px==> gernel) , but here 1 rem consider =21 px 
+    , so, the margin is 63px */
+}
+
+.btn{
+    display: inline-block;
+    border-radius: 100px;
+    background-color: #38CFD9;
+    padding: .75em 2em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    color: #23424A;
+    font-weight: 900;
+    letter-spacing: 0.1rem;
+    
+}
+
+.btn:hover,
+.btn:focus{
+    opacity: .75;
+}
