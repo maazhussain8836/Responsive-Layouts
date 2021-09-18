@@ -1,0 +1,301 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    /* font-family: 'Montserrat', sans-serif; */
+/* font-family: 'Oswald', sans-serif; */
+    font-size: 1.3rem;
+}
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+    /* added for nav-toggle positioning */
+    position: relative;
+    
+}
+
+img{
+    max-width: 100%;
+}
+header {
+    font-family: 'Oswald', sans-serif;
+    background: #2E323F;
+    padding: 1em 0;
+    text-align: center;
+}
+
+.nav {
+    width: 100%;
+}
+
+
+
+.nav-toggle {
+    cursor: pointer;
+    border: 0;
+    width: 3em;
+    height: 3em;
+    padding: 0em;
+    border-radius: 50%;
+    background: #072A2D;
+    color: white;
+    transition: opacity 250ms ease;
+    
+    position: absolute;
+    left: 0;
+}
+
+.nav-toggle:focus,
+.nav-toggle:hover {
+    opacity: .75;
+}
+
+.hamburger {
+    width: 50%;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    background: white;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    width: 100%;
+}
+
+.hamburger::before {
+    transform: translateY(-6px);
+}
+
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+/* made changes here from video
+   to make it more accessible.
+   
+   Works the same :) */
+.nav {
+    visibility: hidden;
+    height: 0;
+    position: absolute;
+}
+
+.nav--visible {
+    visibility: visible;
+    height: auto;
+    position: relative;
+} 
+
+.nav__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav__list--primary{
+    margin-bottom: 2em;
+}
+
+.nav__item{
+    margin-top: .75em;
+}
+
+.nav__link{
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.nav__link--button{
+    padding: .25em .75em;
+    background: #A59678;
+    color: #fff;
+    border-radius: 100px; 
+}
+
+.nav__link:hover,
+.nav__link:focus{
+    opacity: .65;
+}
+
+.logo {
+    height: 30px;
+}
+
+section{
+    padding: 2rem 0;
+    
+}
+.section__two{
+    background: #3B4050;
+    min-height: 100vh;
+    
+}
+.section__two p{
+    color: whitesmoke;
+    font-size: 24px;
+    font-weight:100;
+    
+}
+p{
+    font-family: 'Montserrat', sans-serif;
+}
+h1{
+    font-size: 50px;
+    font-family: 'Oswald', sans-serif;
+    line-height: 3.3rem;
+    color: #ffffff;
+    
+}
+h3{
+    font-size: 30px;
+    font-family: 'Oswald', sans-serif;
+    color: #A59678;
+}
+
+span{
+    color: #A59678;
+}
+.btn{
+    margin-top: 1rem;
+    padding: 0.35rem 2.5rem;
+    border-radius: 100px;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    background: #A59678;
+    color: #ffffff;
+    border: none;
+}
+
+.section__three{
+    background:lightgray;
+    padding: 5rem 0;
+}
+.section__three p{
+    color: #2E323F;
+    
+}
+.h3__white{
+    color: #ffffff;
+    margin: 2rem 0;
+    padding-top: 1.5rem;
+}
+.col__1,
+.col__2,
+.col__3{
+    background: #3B4050;
+    color:gray;
+    padding-bottom: 2rem;
+    
+}
+.section__footer{
+    background: #3B4050;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    
+}
+.section__footer h1{
+    text-align: center;
+    line-height: 3rem;
+    font-size: 50px;
+}
+
+.section__footer h3{
+    color: #A59678;
+    font-size: 21px;
+}
+/* all p of footer */
+.footer p{
+    color: gray;
+}
+/* last 3 p of footer */
+.footer__p{
+    line-height: 3rem;
+}
+
+.col{
+    margin-right: 1rem;
+    width:100% ;
+    text-align: center;
+}
+
+/* 700 px or more than it */
+@media (min-width: 700px) {
+
+    
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav {
+        visibility: visible;
+        display: flex;
+        height: auto;
+        align-items: center;
+        position: relative;
+        justify-content: flex-end;
+    }
+
+    .nav__list{
+        display: flex;
+        margin: 0;
+    }
+
+    .nav__item{
+        margin: 0 0 0 1.5em;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .col + .col {
+        margin-left: 4rem;
+    }
+    .col{
+        width: 100%;
+    }
+    .col__start{
+        margin-right: 3rem;
+    }
+
+    .row__block{
+        display: block;
+        justify-content: space-between;
+        padding: -3rem -2rem;
+    }
+    .h3__white{
+        
+        padding-top: 1.5rem;
+        margin-top: 1rem;
+    }
+    .para__down{
+        margin-top: 12rem;
+    }
+
+    
+h1{
+    font-size: 80px;
+    line-height: 5.5rem;
+}
+}
